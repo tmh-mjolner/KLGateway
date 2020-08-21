@@ -10,8 +10,6 @@ An overview of the model is provided in the following illustration:
 
 ![Model](./GatewayModel.png)
 
-\*) 0 or more\
-\+) 1 or more
 The reporting contains the following types of information:
 
 #### Citizen
@@ -77,11 +75,9 @@ All changes to the planned interventions since the last reporting must be contai
 Free text information about care plans is not part of this reporting.
 
 ##### Validation
-- Planned interventions are either home care or nursing interventions
 - Planned interventions refer to the citizen included in the report
 - Planned interventions have a start date
-- Home care interventions have a valid home care intervention code according to FSIII (Servicelov indsats)
-- Nursing interventions have a valid nursing intervention code according to FSIII (Sundhedslovlov indsats)
+- Home care interventions have a valid home care or nursing intervention code according to FSIII (Servicelov/sundhedslovlov indsats)
 - Planned interventions refer to zero or more health care or nursing conditions included in the report as reason for intervention
 
 #### Matter of Interest Observations

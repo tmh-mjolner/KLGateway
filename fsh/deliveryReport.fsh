@@ -18,8 +18,7 @@ Description: "Deliver report to deliver for each citizen."
     citizensOwnImportanceObservation 0.. and
     citizensOwnPerformanceObservation 0.. and
     nursingCondition 0.. and
-    homeCarePlannedIntervention 0.. and
-    nursingPlannedIntervention 0.. and
+    plannedIntervention 0.. and
     matterOfInterestObservation 0.. and
     homeCareMatterOfInterestSeverityObservation 0.. and
     encounter 0.. and
@@ -36,10 +35,8 @@ Description: "Deliver report to deliver for each citizen."
 * entry[citizensOwnPerformanceObservation].resource only KLGatewayCareCitizensOwnPerformanceObservation
 * entry[nursingCondition].resource 1..1
 * entry[nursingCondition].resource only KLGatewayCareNursingCondition
-* entry[homeCarePlannedIntervention].resource 1..1
-* entry[homeCarePlannedIntervention].resource only KLGatewayCareHomeCarePlannedIntervention
-* entry[nursingPlannedIntervention].resource 1..1
-* entry[nursingPlannedIntervention].resource only KLGatewayCareNursingPlannedIntervention
+* entry[plannedIntervention].resource 1..1
+* entry[plannedIntervention].resource only KLGatewayCarePlannedIntervention
 * entry[matterOfInterestObservation].resource 1..1
 * entry[matterOfInterestObservation].resource only KLGatewayCareMatterOfInterestObservation
 * entry[homeCareMatterOfInterestSeverityObservation].resource 1..1
@@ -66,7 +63,10 @@ InstanceOf: KLGatewayCareDeliveryReport
 * entry[citizensOwnPerformanceObservation].resource = UdfoererSelvVaskeSig
 * entry[nursingCondition].fullUrl = "Condition/ProblemerMedPersonligPleje"
 * entry[nursingCondition].resource = ProblemerMedPersonligPleje
-
+* entry[plannedIntervention].fullUrl = "CarePlan/PersonligHygiejne"
+* entry[plannedIntervention].resource = PersonligHygiejne
+* entry[plannedIntervention].fullUrl = "CarePlan/Dialyse"
+* entry[plannedIntervention].resource = Dialyse
 * entry[matterOfInterestObservation].fullUrl = "Observation/EgensomsorgBegraensninger"
 * entry[matterOfInterestObservation].resource = EgensomsorgBegraensninger
 * entry[homeCareMatterOfInterestSeverityObservation].fullUrl = "Observation/EgensomsorgLetteBegraensninger"
