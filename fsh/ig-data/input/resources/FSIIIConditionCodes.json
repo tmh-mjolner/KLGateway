@@ -1,0 +1,50 @@
+{
+  "resourceType": "ValueSet",
+  "id": "FSIIIConditionCodes",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href=\"ValueSet-KLConditionCodesHomeCare.html\">http://kl.dk/fhir/common/caresocial/ValueSet/KLConditionCodesHomeCare</a></li><li>Import all the codes that are contained in <a href=\"ValueSet-KLConditionCodesNursing.html\">http://kl.dk/fhir/common/caresocial/ValueSet/KLConditionCodesNursing</a></li><li>Import all the codes that are contained in <a href=\"ValueSet-KLConditionCodesTheraphy.html\">http://kl.dk/fhir/common/caresocial/ValueSet/KLConditionCodesTheraphy</a></li><li>Import all the codes that are contained in <a href=\"ValueSet-KLConditionCodesPrevention.html\">http://kl.dk/fhir/common/caresocial/ValueSet/KLConditionCodesPrevention</a></li></ul></div>"
+  },
+  "url": "http://kl.dk/fhir/common/caresocial/ValueSet/FSIIIConditionCodes",
+  "version": "0.1.5",
+  "name": "FSIIIConditionCodes",
+  "title": "FSIII Condition codes",
+  "status": "active",
+  "date": "2020-08-10T08:58:49+00:00",
+  "contact": [
+    {
+      "name": "Kommunernes landsforening",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "kl@kl.dk"
+        }
+      ]
+    }
+  ],
+  "description": "Danish municipality FSIII condition codes",
+  "compose": {
+    "include": [
+      {
+        "valueSet": [
+          "http://kl.dk/fhir/common/caresocial/ValueSet/KLConditionCodesHomeCare"
+        ]
+      },
+      {
+        "valueSet": [
+          "http://kl.dk/fhir/common/caresocial/ValueSet/KLConditionCodesNursing"
+        ]
+      },
+      {
+        "valueSet": [
+          "http://kl.dk/fhir/common/caresocial/ValueSet/KLConditionCodesTheraphy"
+        ]
+      },
+      {
+        "valueSet": [
+          "http://kl.dk/fhir/common/caresocial/ValueSet/KLConditionCodesPrevention"
+        ]
+      }
+    ]
+  }
+}

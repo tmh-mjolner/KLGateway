@@ -1,0 +1,43 @@
+{
+  "resourceType": "ValueSet",
+  "id": "FSIIIImportanceLevelCodes",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <code>urn:oid:1.2.208.176.2.21</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>D1</td><td>Oplever ikke begrænsninger</td><td/></tr><tr><td>D2</td><td>Oplever begrænsninger</td><td/></tr></table></li></ul></div>"
+  },
+  "url": "http://kl.dk/fhir/common/caresocial/ValueSet/FSIIIImportanceLevelCodes",
+  "version": "0.1.5",
+  "name": "FSIIIImportanceLevelCodes",
+  "title": "FSIIIImportanceLevelCodes",
+  "status": "active",
+  "date": "2020-08-12T07:14:06+00:00",
+  "contact": [
+    {
+      "name": "Kommunernes landsforening",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "kl@kl.dk"
+        }
+      ]
+    }
+  ],
+  "description": "Importance level codes (Betydning), as evaluated by the citizen",
+  "compose": {
+    "include": [
+      {
+        "system": "urn:oid:1.2.208.176.2.21",
+        "concept": [
+          {
+            "code": "D1",
+            "display": "Oplever ikke begrænsninger"
+          },
+          {
+            "code": "D2",
+            "display": "Oplever begrænsninger"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "kl-terminology-system",
+  "url": "http://kl.dk/fhir/common/caresocial/ValueSet/kl-terminology-system",
+  "name": "KLTerminologySystem",
+  "version": "latest",
+  "status": "active",
+  "experimental": false,
+  "date": "2019-01-29T00:00:00+00:00",
+  "publisher": "kl.dk",
+  "description": "Official KL Terminolog System",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "urn:oid:1.2.208.176.2.21"
+    }
+  ]
+}

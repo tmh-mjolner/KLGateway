@@ -1,0 +1,159 @@
+{
+  "resourceType": "ValueSet",
+  "id": "FSIIIHomeCareInterventions",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <code>urn:oid:1.2.208.176.2.21</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>H1.4</td><td>Mobilitet</td><td/></tr><tr><td>H1.12</td><td>Praktiske indsatser i relation til børn i husstanden</td><td/></tr><tr><td>H1.2</td><td>Udskillelser</td><td/></tr><tr><td>H1.11</td><td>Madservice</td><td/></tr><tr><td>H1.1</td><td>Personlig hygiejne</td><td/></tr><tr><td>H1.7</td><td>Indkøb</td><td/></tr><tr><td>H1.3</td><td>Ernæring</td><td/></tr><tr><td>H1.9</td><td>Tøjvask</td><td/></tr><tr><td>H1.8</td><td>Rengøring</td><td/></tr><tr><td>H1.5</td><td>Hverdagens aktiviteter</td><td/></tr><tr><td>H1.6</td><td>Tilsyn/omsorg</td><td/></tr><tr><td>H1.10</td><td>Tilberede/anrette mad</td><td/></tr><tr><td>H2.11</td><td>RH Praktiske indsatser i relation til børn i husstanden</td><td/></tr><tr><td>H2.9</td><td>RH Tøjvask</td><td/></tr><tr><td>H2.10</td><td>RH Udskillelser</td><td/></tr><tr><td>H2.6</td><td>RH Rengøring</td><td/></tr><tr><td>H2.2</td><td>RH Hverdagens aktiviteter</td><td/></tr><tr><td>H2.8</td><td>RH Tilsyn/omsorg</td><td/></tr><tr><td>H2.5</td><td>RH Personlig hygiejne</td><td/></tr><tr><td>H2.3</td><td>RH Indkøb</td><td/></tr><tr><td>H2.7</td><td>RH Tilberede/anrette mad</td><td/></tr><tr><td>H2.1</td><td>RH Ernæring</td><td/></tr><tr><td>H2.4</td><td>RH Mobilitet</td><td/></tr><tr><td>H3.3</td><td>Praktisk hjælp efter §84</td><td/></tr><tr><td>H3.1</td><td>Aflastningsophold uden for hjemmet</td><td/></tr><tr><td>H3.2</td><td>Afløsning i hjemmet</td><td/></tr><tr><td>H4.1</td><td>Midlertidig ophold</td><td/></tr><tr><td>H5.1</td><td>Genoptræning af funktionsnedsættelse</td><td/></tr><tr><td>H6.1</td><td>Vedligehold af færdigheder</td><td/></tr><tr><td>H7.2</td><td>Koordinerende 0-ydelse</td><td/></tr><tr><td>H7.1</td><td>Generel 0-ydelse</td><td/></tr></table></li></ul></div>"
+  },
+  "url": "http://kl.dk/fhir/common/caresocial/ValueSet/FSIIIHomeCareInterventions",
+  "version": "0.1.5",
+  "name": "FSIIIHomeCareInterventions",
+  "title": "Home Care Interventions",
+  "status": "active",
+  "date": "2020-08-12T07:14:06+00:00",
+  "contact": [
+    {
+      "name": "Kommunernes landsforening",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "kl@kl.dk"
+        }
+      ]
+    }
+  ],
+  "description": "Home Care Interventions as described by FSIII",
+  "compose": {
+    "include": [
+      {
+        "system": "urn:oid:1.2.208.176.2.21",
+        "concept": [
+          {
+            "code": "H1.4",
+            "display": "Mobilitet"
+          },
+          {
+            "code": "H1.12",
+            "display": "Praktiske indsatser i relation til børn i husstanden"
+          },
+          {
+            "code": "H1.2",
+            "display": "Udskillelser"
+          },
+          {
+            "code": "H1.11",
+            "display": "Madservice"
+          },
+          {
+            "code": "H1.1",
+            "display": "Personlig hygiejne"
+          },
+          {
+            "code": "H1.7",
+            "display": "Indkøb"
+          },
+          {
+            "code": "H1.3",
+            "display": "Ernæring"
+          },
+          {
+            "code": "H1.9",
+            "display": "Tøjvask"
+          },
+          {
+            "code": "H1.8",
+            "display": "Rengøring"
+          },
+          {
+            "code": "H1.5",
+            "display": "Hverdagens aktiviteter"
+          },
+          {
+            "code": "H1.6",
+            "display": "Tilsyn/omsorg"
+          },
+          {
+            "code": "H1.10",
+            "display": "Tilberede/anrette mad"
+          },
+          {
+            "code": "H2.11",
+            "display": "RH Praktiske indsatser i relation til børn i husstanden"
+          },
+          {
+            "code": "H2.9",
+            "display": "RH Tøjvask"
+          },
+          {
+            "code": "H2.10",
+            "display": "RH Udskillelser"
+          },
+          {
+            "code": "H2.6",
+            "display": "RH Rengøring"
+          },
+          {
+            "code": "H2.2",
+            "display": "RH Hverdagens aktiviteter"
+          },
+          {
+            "code": "H2.8",
+            "display": "RH Tilsyn/omsorg"
+          },
+          {
+            "code": "H2.5",
+            "display": "RH Personlig hygiejne"
+          },
+          {
+            "code": "H2.3",
+            "display": "RH Indkøb"
+          },
+          {
+            "code": "H2.7",
+            "display": "RH Tilberede/anrette mad"
+          },
+          {
+            "code": "H2.1",
+            "display": "RH Ernæring"
+          },
+          {
+            "code": "H2.4",
+            "display": "RH Mobilitet"
+          },
+          {
+            "code": "H3.3",
+            "display": "Praktisk hjælp efter §84"
+          },
+          {
+            "code": "H3.1",
+            "display": "Aflastningsophold uden for hjemmet"
+          },
+          {
+            "code": "H3.2",
+            "display": "Afløsning i hjemmet"
+          },
+          {
+            "code": "H4.1",
+            "display": "Midlertidig ophold"
+          },
+          {
+            "code": "H5.1",
+            "display": "Genoptræning af funktionsnedsættelse"
+          },
+          {
+            "code": "H6.1",
+            "display": "Vedligehold af færdigheder"
+          },
+          {
+            "code": "H7.2",
+            "display": "Koordinerende 0-ydelse"
+          },
+          {
+            "code": "H7.1",
+            "display": "Generel 0-ydelse"
+          }
+        ]
+      }
+    ]
+  }
+}
