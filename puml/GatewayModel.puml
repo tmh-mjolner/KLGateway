@@ -1,0 +1,49 @@
+@startuml GatewayModel
+
+hide empty members
+
+class "Citizen" as citizen
+class "Condition" as condition
+class "Home Care Condition" as homeCareCondition
+class "Nursing Condition" as nursingCondition
+class "Goal" as goal
+class "Citizens Own Observation" as citizensOwnObservation
+class "Citizens Own Importance Observation" as citizensOwnImportanceObservation
+class "Citizens Own Performance Observation" as citizensOwnPerformanceObservation
+class "Planned Intervention" as carePlannedIntervention
+' class "Home Care Planned Intervention" as homeCarePlannedIntervention
+' class "Nursing Planned Intervention" as nursingPlannedIntervention
+class "Encounter" as encounter
+class "Follow Up Observation" as careFollowUpObservation
+class "Matter of Interest Observation" as matterOfInterestObservation
+class "Matter of Interest Severity Observation" as matterOfInterestSeverityObservation
+
+citizen --"*" condition
+
+condition <|-- homeCareCondition
+condition <|-- nursingCondition
+
+homeCareCondition --"0..1" goal
+
+citizensOwnImportanceObservation "0..1"-- homeCareCondition
+citizensOwnPerformanceObservation "0..1"-- homeCareCondition
+
+citizensOwnObservation <|-- citizensOwnImportanceObservation
+citizensOwnObservation <|-- citizensOwnPerformanceObservation
+
+condition --"0..1" encounter
+
+citizen --"*" carePlannedIntervention
+condition "*"- carePlannedIntervention
+carePlannedIntervention --"0..1" encounter
+
+' carePlannedIntervention <|-- homeCarePlannedIntervention
+' carePlannedIntervention <|-- nursingPlannedIntervention
+
+encounter --"0..1" careFollowUpObservation
+
+citizen --"*" matterOfInterestObservation
+
+matterOfInterestObservation --"0..1" encounter
+matterOfInterestObservation --"0..1" matterOfInterestSeverityObservation
+@enduml

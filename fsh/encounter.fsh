@@ -32,6 +32,7 @@ Description: "Encounter for following up on conditions, care plans, or observati
 * participant ..0
 * appointment ..0
 * period 1..1
+* period.start 1..1
 * period.end ..0
 * length ..0
 * reasonCode ..0
