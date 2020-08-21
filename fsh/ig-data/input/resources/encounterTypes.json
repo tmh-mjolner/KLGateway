@@ -1,0 +1,63 @@
+{
+  "resourceType": "ValueSet",
+  "id": "KLCommonCareSocialEncounterTypes",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"CodeSystem-KLCommonCareSocialCodes.html\"><code>http://kl.dk/fhir/common/caresocial/CodeSystem/KLCommonCareSocialCodes</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-KLCommonCareSocialCodes.html#KLCommonCareSocialCodes-829ac647-c7fc-4964-836b-f708d886e0e3\">829ac647-c7fc-4964-836b-f708d886e0e3</a></td><td>oplysning</td><td>oplysning er foretaget ved kontakt</td></tr><tr><td><a href=\"CodeSystem-KLCommonCareSocialCodes.html#KLCommonCareSocialCodes-9269c9a2-8220-447b-a127-811275b41062\">9269c9a2-8220-447b-a127-811275b41062</a></td><td>vurdering/bevilling</td><td>vurdering og/eller bevilling er foretaget ved kontakt</td></tr><tr><td><a href=\"CodeSystem-KLCommonCareSocialCodes.html#KLCommonCareSocialCodes-9f03dfbb-7a97-45a5-94db-d4c3501714a9\">9f03dfbb-7a97-45a5-94db-d4c3501714a9</a></td><td>opfølgning</td><td>opfølgning foretaget ved kontakt</td></tr><tr><td><a href=\"CodeSystem-KLCommonCareSocialCodes.html#KLCommonCareSocialCodes-784275f1-6822-4a88-b361-d958007d5253\">784275f1-6822-4a88-b361-d958007d5253</a></td><td>udførelse af planlagt indsats</td><td>Planlagt indsats udført ved kontakt</td></tr><tr><td><a href=\"CodeSystem-KLCommonCareSocialCodes.html#KLCommonCareSocialCodes-15775b0a-7ec6-469e-9d3c-a81fbc9a1b45\">15775b0a-7ec6-469e-9d3c-a81fbc9a1b45</a></td><td>udførelse af akutindsats</td><td>Akutindsats, bevilget af læge eller akutteam, udført ved kontakt</td></tr><tr><td><a href=\"CodeSystem-KLCommonCareSocialCodes.html#KLCommonCareSocialCodes-c03b426a-4348-407f-b343-f4baa9759c72\">c03b426a-4348-407f-b343-f4baa9759c72</a></td><td>udførelse af ikke-bevilget indsats</td><td>Indsats, der ikke i forvejen var bevilget, udført ved kontakt</td></tr><tr><td><a href=\"CodeSystem-KLCommonCareSocialCodes.html#KLCommonCareSocialCodes-bb6fc544-7f4f-4b50-8868-1431e0df2381\">bb6fc544-7f4f-4b50-8868-1431e0df2381</a></td><td>observation</td><td>observation foretaget ved kontakt</td></tr></table></li></ul></div>"
+  },
+  "url": "http://kl.dk/fhir/common/caresocial/ValueSet/KLCommonCareSocialEncounterTypes",
+  "version": "0.1.5",
+  "name": "KLCommonCareSocialEncounterTypes",
+  "title": "Encounter Types",
+  "status": "active",
+  "date": "2020-08-10T08:58:49+00:00",
+  "contact": [
+    {
+      "name": "Kommunernes landsforening",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "kl@kl.dk"
+        }
+      ]
+    }
+  ],
+  "description": "Encounter types in Danish municipality health, social and elderly care (note that these are specific to this model, they are not replicas of a municipality terminology service)",
+  "compose": {
+    "include": [
+      {
+        "system": "http://kl.dk/fhir/common/caresocial/CodeSystem/KLCommonCareSocialCodes",
+        "concept": [
+          {
+            "code": "829ac647-c7fc-4964-836b-f708d886e0e3",
+            "display": "oplysning"
+          },
+          {
+            "code": "9269c9a2-8220-447b-a127-811275b41062",
+            "display": "vurdering/bevilling"
+          },
+          {
+            "code": "9f03dfbb-7a97-45a5-94db-d4c3501714a9",
+            "display": "opfølgning"
+          },
+          {
+            "code": "784275f1-6822-4a88-b361-d958007d5253",
+            "display": "udførelse af planlagt indsats"
+          },
+          {
+            "code": "15775b0a-7ec6-469e-9d3c-a81fbc9a1b45",
+            "display": "udførelse af akutindsats"
+          },
+          {
+            "code": "c03b426a-4348-407f-b343-f4baa9759c72",
+            "display": "udførelse af ikke-bevilget indsats"
+          },
+          {
+            "code": "bb6fc544-7f4f-4b50-8868-1431e0df2381",
+            "display": "observation"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "resourceType": "ValueSet",
+  "id": "FSIIIConcernCodes",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href=\"ValueSet-NursingAreas.html\">http://kl.dk/fhir/common/caresocial/ValueSet/NursingAreas</a></li><li>Import all the codes that are contained in <a href=\"ValueSet-HomeCareAreas.html\">http://kl.dk/fhir/common/caresocial/ValueSet/HomeCareAreas</a></li></ul></div>"
+  },
+  "url": "http://kl.dk/fhir/care/ValueSet/FSIIIConcernCodes",
+  "version": "0.1.5",
+  "name": "FSIIIConcernCodes",
+  "title": "FSIII Concern codes",
+  "status": "active",
+  "date": "2020-08-12T07:14:06+00:00",
+  "contact": [
+    {
+      "name": "Kommunernes landsforening",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "kl@kl.dk"
+        }
+      ]
+    }
+  ],
+  "description": "Information codes from FSIII and FFB (Område, Tema, Generelle oplysninger)",
+  "compose": {
+    "include": [
+      {
+        "valueSet": [
+          "http://kl.dk/fhir/common/caresocial/ValueSet/NursingAreas"
+        ]
+      },
+      {
+        "valueSet": [
+          "http://kl.dk/fhir/common/caresocial/ValueSet/HomeCareAreas"
+        ]
+      }
+    ]
+  }
+}

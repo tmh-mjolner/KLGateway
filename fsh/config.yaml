@@ -1,0 +1,22 @@
+id: hl7.fhir.dk.kl.gateway.care
+canonical: http://gateway.kl.dk
+name: KLGateway
+status: draft
+version: 0.9.1
+fhirVersion: 4.0.1
+copyrightYear: 2020+
+releaseLabel: Build CI
+publisher:
+  name: KL
+  url: http://www.kl.dk
+jurisdiction: urn:iso:std:iso:3166#DK "Denmark"
+template: fhir.base.template#0.1.0
+
+menu:
+  Home: index.html
+  Artifacts: artifacts.html
+
+parameters:
+  apply-contact: true
+  apply-juristiction: true
+  apply-publisher: true

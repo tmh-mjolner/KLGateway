@@ -1,0 +1,83 @@
+{
+  "resourceType": "ValueSet",
+  "id": "NursingAreas",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <code>urn:oid:1.2.208.176.2.21</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>I9</td><td>Smerter og sanseindtryk</td><td/></tr><tr><td>I2</td><td>Bevægeapparat</td><td/></tr><tr><td>I11</td><td>Viden og udvikling</td><td/></tr><tr><td>I1</td><td>Funktionsniveau</td><td/></tr><tr><td>I5</td><td>Kommunikation</td><td/></tr><tr><td>I7</td><td>Respiration og cirkulation</td><td/></tr><tr><td>I4</td><td>Hud og slimhinder</td><td/></tr><tr><td>I8</td><td>Seksualitet</td><td/></tr><tr><td>I3</td><td>Ernæring</td><td/></tr><tr><td>I12</td><td>Udskillelse af affaldsstoffer</td><td/></tr><tr><td>I10</td><td>Søvn og hvile</td><td/></tr><tr><td>I6</td><td>Psykosociale forhold</td><td/></tr></table></li></ul></div>"
+  },
+  "url": "http://kl.dk/fhir/common/caresocial/ValueSet/NursingAreas",
+  "version": "0.1.5",
+  "name": "NursingAreas",
+  "title": "Nursing areas",
+  "status": "active",
+  "date": "2020-08-12T07:14:06+00:00",
+  "contact": [
+    {
+      "name": "Kommunernes landsforening",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "kl@kl.dk"
+        }
+      ]
+    }
+  ],
+  "description": "Observation codes for the 12 nursing areas as defined by FSIII",
+  "compose": {
+    "include": [
+      {
+        "system": "urn:oid:1.2.208.176.2.21",
+        "concept": [
+          {
+            "code": "I9",
+            "display": "Smerter og sanseindtryk"
+          },
+          {
+            "code": "I2",
+            "display": "Bevægeapparat"
+          },
+          {
+            "code": "I11",
+            "display": "Viden og udvikling"
+          },
+          {
+            "code": "I1",
+            "display": "Funktionsniveau"
+          },
+          {
+            "code": "I5",
+            "display": "Kommunikation"
+          },
+          {
+            "code": "I7",
+            "display": "Respiration og cirkulation"
+          },
+          {
+            "code": "I4",
+            "display": "Hud og slimhinder"
+          },
+          {
+            "code": "I8",
+            "display": "Seksualitet"
+          },
+          {
+            "code": "I3",
+            "display": "Ernæring"
+          },
+          {
+            "code": "I12",
+            "display": "Udskillelse af affaldsstoffer"
+          },
+          {
+            "code": "I10",
+            "display": "Søvn og hvile"
+          },
+          {
+            "code": "I6",
+            "display": "Psykosociale forhold"
+          }
+        ]
+      }
+    ]
+  }
+}

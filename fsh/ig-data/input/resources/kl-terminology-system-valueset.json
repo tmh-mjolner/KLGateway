@@ -1,0 +1,25 @@
+{
+  "resourceType": "ValueSet",
+  "id": "kl-terminology-system-valueset",
+  "url": "http://kl.dk/fhir/common/caresocial/ValueSet/kl-terminology-system-valueset",
+  "version": "4.0.1",
+  "name": "KLTerminologyServer",
+  "title": "KL Terminology Server",
+  "status": "active",
+  "experimental": false,
+  "date": "2020-08-01T09:29:23+11:00",
+  "description": "This value set defines the set of codes that can be used to identify the terminology server from KL.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://kl.dk/fhir/common/caresocial/ValueSet/kl-terminology-system",
+        "concept": [
+          {
+            "display": "OID representation of KL terminology server",
+            "code": "urn:oid:1.2.208.176.2.21"
+          }
+        ]
+      }
+    ]
+  }
+}
