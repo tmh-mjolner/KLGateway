@@ -13,7 +13,8 @@ Description: "Structured result or outcome of a follow up."
 * code.coding = $SnomedCT#712744002
 * subject only Reference(klgateway-care-citizen)
 * subject ^type.aggregation = #bundled
-* focus ..0 // Should refer to condition(s) and/or intervention(s)? 
+* focus 1..1
+* focus only Reference(KLGatewayCareHomeCareCondition or KLGatewayCareNursingCondition or KLGatewayCarePlannedIntervention or KLGatewayCareMatterOfInterestObservation) 
 * encounter 1..1
 * encounter only Reference(KLGatewayCareEncounter)
 * encounter ^type.aggregation = #bundled
@@ -37,11 +38,52 @@ Description: "Structured result or outcome of a follow up."
 * component ..0
 
 
-Instance: Fortsaettes
+Instance: VaskeSigFortsaettes
 InstanceOf: KLGatewayCareFollowUpObservation
 * status = #final
 * code = $SnomedCT#712744002
 * subject = Reference(TestPerson)
+* focus = Reference(VaskeSigLetteBegraensninger)
+* encounter = Reference(OpfoelgningsKontakt)
+* effectiveDateTime = 2020-08-14
+* valueCodeableConcept = $KLTerminology#E1
+
+Instance: PersonligPlejeFortsaettes
+InstanceOf: KLGatewayCareFollowUpObservation
+* status = #final
+* code = $SnomedCT#712744002
+* subject = Reference(TestPerson)
+* focus = Reference(ProblemerMedPersonligPleje)
+* encounter = Reference(OpfoelgningsKontakt)
+* effectiveDateTime = 2020-08-14
+* valueCodeableConcept = $KLTerminology#E1
+
+Instance: PersonligHygiejneFortsaettes
+InstanceOf: KLGatewayCareFollowUpObservation
+* status = #final
+* code = $SnomedCT#712744002
+* subject = Reference(TestPerson)
+* focus = Reference(PersonligHygiejne)
+* encounter = Reference(OpfoelgningsKontakt)
+* effectiveDateTime = 2020-08-14
+* valueCodeableConcept = $KLTerminology#E1
+
+Instance: DialyseFortsaettes
+InstanceOf: KLGatewayCareFollowUpObservation
+* status = #final
+* code = $SnomedCT#712744002
+* subject = Reference(TestPerson)
+* focus = Reference(Dialyse)
+* encounter = Reference(OpfoelgningsKontakt)
+* effectiveDateTime = 2020-08-14
+* valueCodeableConcept = $KLTerminology#E1
+
+Instance: EgensomsorgBegraensningerFortsaettes
+InstanceOf: KLGatewayCareFollowUpObservation
+* status = #final
+* code = $SnomedCT#712744002
+* subject = Reference(TestPerson)
+* focus = Reference(EgensomsorgBegraensninger)
 * encounter = Reference(OpfoelgningsKontakt)
 * effectiveDateTime = 2020-08-14
 * valueCodeableConcept = $KLTerminology#E1

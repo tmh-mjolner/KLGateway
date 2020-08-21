@@ -13,6 +13,7 @@ Description: "Detailed information about conditions."
 * clinicalStatus.coding.userSelected ..0
 * clinicalStatus.text ..0
 * verificationStatus MS
+* verificationStatus ^definition = "Must be present if entered-in-error. Must not be present otherwise."
 * verificationStatus.coding 1..1
 * verificationStatus.coding = $VerificationStatus#entered-in-error
 * verificationStatus.coding.system ..0
@@ -42,3 +43,4 @@ Description: "Detailed information about conditions."
 * evidence ..0
 * note ..0
 * extension contains klgateway-care-follow-up-encounter-extension named followUpEncounter 0..1 MS
+* extension[followUpEncounter] ^definition = "Encounter for following up on this condition. Must be present if a follow-up date is known"
