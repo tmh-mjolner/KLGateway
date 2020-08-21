@@ -26,6 +26,7 @@ Description: "Matter or area of interest in relation to the care of the citizen.
 * device ..0
 * referenceRange ..0
 * hasMember 0..1 MS
+* hasMember ^definition = "Severity of the observation. Must be present for home care matters of interest, if severity is known"
 * hasMember only Reference(KLGatewayCareHomeCareMatterOfInterestSeverityObservation)
 * hasMember ^type.aggregation = #bundled
 * derivedFrom ..0

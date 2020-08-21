@@ -41,6 +41,7 @@ Description: "Planned interventions for nursing and home care in Danish Municipa
 * activity.detail.reasonCode ..0
 * activity.detail.reasonReference only Reference(KLGatewayCareHomeCareCondition or KLGatewayCareNursingCondition)
 * activity.detail.reasonReference MS
+* activity.detail.reasonReference ^definition = "Reason for this intervention. Must contain all conditions known to be addressed by this intervention"
 * activity.detail.reasonReference ^type.aggregation = #bundled
 * activity.detail.goal ..0
 // * activity.detail.status
@@ -55,7 +56,7 @@ Description: "Planned interventions for nursing and home care in Danish Municipa
 * activity.detail.description ..0
 * note ..0
 * extension contains klgateway-care-follow-up-encounter-extension named followUpEncounter 0..1 MS
-
+* extension[followUpEncounter] ^definition = "Encounter for following up on this intervention. Must be present if a follow-up date is known"
 
 Instance: PersonligHygiejne
 InstanceOf: KLGatewayCarePlannedIntervention

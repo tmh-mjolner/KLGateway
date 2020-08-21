@@ -81,7 +81,7 @@ Free text information about care plans is not part of this reporting.
 - Planned interventions refer to zero or more health care or nursing conditions included in the report as reason for intervention
 
 #### Matter of Interest Observations
-Information about matters of interest for home care or nursing condition areas (FSIII tilstandsområder). A matter of interest observation must contain the condition area, either home care or nursing, an encounter with the follow-up date, and the time of the observation. A matter of interest observation for a home care condition area must also contain the serverity of the matter of interest as defined by FSIII, if available.
+Information about matters of interest for home care or nursing condition areas (FSIII tilstandsområder). A matter of interest observation must contain the condition area, either home care or nursing, and the time of the observation. A matter of interest observation for a home care condition area must also contain the serverity of the matter of interest as defined by FSIII and an encounter with a follow-up date, if available.
 
 All changes to the matter of interest observations since the last reporting must be included in a new report, including all the referenced follow-up encounters.
 
@@ -99,7 +99,7 @@ Free text information about area observations is not part of this reporting.
 - The code for matter of interest and the code of the referred severity contain the same value
 
 #### Encounters
-Information about the encounters referenced from conditions, care plans, and area observations to hold the follow-up dates. The encounter must contain the start date.
+Information about the encounters referenced from conditions, care plans, and area observations to hold the follow-up dates. The encounter must contain the expected start date of the next follow-up.
 
 All referenced encounters from other resources in a report must also be included.
 
@@ -132,6 +132,6 @@ If information about a citizen changes over time, e.g after a new assessment of 
 #### Validation
 The delivery report is immediately validated when a source system posts it to the gateway. The gateway validates all the rules defined in this profile for each delivery report and returns the list of errors found in the response. The gateway returns a machine readable error code if validation errors are found, and a textual description (not machine readable) of each error which explains the error in terms of the FHIR protocol.
 
-The gateway thus validates that the format of the content is valid, the structure of all resources are correct, the cardinatity of all values are valid, codings only contains valid codes, and that all referenced resources are included in the report. The rules described on this page are validated to the extent possible through more complex constraints in the profiles. The constraints in the profiles also contains a textual description to describe the error when the validation finds that a constraint is not observed.
+The gateway thus validates that the format of the content is valid, the structure of all resources are correct, the cardinatity of all values are valid, codings only contains valid codes, and that all referenced resources are included in the report. The rules described on this page are validated to the extent possible through more complex constraints in the profiles. The constraints in the profiles also contains a textual description to describe the error when the validation finds that a constraint is not observed. This includes more technical validations not listed above, such as fixed values aligned with the shared information model (FKI) and the FHIR standard in general.
 
 The gateway is not able to validate immediately whether the reported data conflicts with previously reported data. Problems like this will probably not be found until the data is processed for business intelligence or reporting to other recipients. Handling these problems will have to be a manual process. The gateway will for obvious reasons not be able to validate whether all the data from the source systems has been reported, including attributes with zero to one or zero to many cardinality marked as "must support".

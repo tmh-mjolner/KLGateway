@@ -73,5 +73,13 @@ InstanceOf: KLGatewayCareDeliveryReport
 * entry[homeCareMatterOfInterestSeverityObservation].resource = EgensomsorgLetteBegraensninger
 * entry[encounter].fullUrl = "Encounter/OpfoelgningsKontakt"
 * entry[encounter].resource = OpfoelgningsKontakt
-* entry[followUpObservation].fullUrl = "Observation/Fortsaettes"
-* entry[followUpObservation].resource = Fortsaettes
+* entry[followUpObservation][0].fullUrl = "Observation/VaskeSigFortsaettes"
+* entry[followUpObservation][0].resource = VaskeSigFortsaettes
+* entry[followUpObservation][1].fullUrl = "Observation/PersonligPlejeFortsaettes"
+* entry[followUpObservation][1].resource = PersonligPlejeFortsaettes
+* entry[followUpObservation][2].fullUrl = "Observation/PersonligHygiejneFortsaettes"
+* entry[followUpObservation][2].resource = PersonligHygiejneFortsaettes
+* entry[followUpObservation][3].fullUrl = "Observation/DialyseFortsaettes"
+* entry[followUpObservation][3].resource = DialyseFortsaettes
+* entry[followUpObservation][4].fullUrl = "Observation/EgensomsorgBegraensningerFortsaettes"
+* entry[followUpObservation][4].resource = EgensomsorgBegraensningerFortsaettes
