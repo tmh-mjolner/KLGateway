@@ -25,18 +25,9 @@ Description: "Matter or area of interest in relation to the care of the citizen.
 * specimen ..0
 * device ..0
 * referenceRange ..0
-* hasMember 0..1 MS
-* hasMember ^definition = "Severity of the observation. Must be present for home care matters of interest, if severity is known"
-* hasMember only Reference(KLGatewayCareHomeCareMatterOfInterestSeverityObservation)
-* hasMember ^type.aggregation = #bundled
+* hasMember 0..0
 * derivedFrom ..0
 * component ..0
-* obeys klgateway-hasMember-code-match
-
-Invariant: klgateway-hasMember-code-match
-Description: "Matter of interest code must match concern code of severity observation"
-Severity: #error
-Expression: "hasMember.empty() or (code = hasMember.resolve().code)"
 
 Instance: EgensomsorgBegraensninger
 InstanceOf: KLGatewayCareMatterOfInterestObservation
@@ -44,4 +35,3 @@ InstanceOf: KLGatewayCareMatterOfInterestObservation
 * code = urn:oid:1.2.208.176.2.21#J1
 * subject = Reference(TestPerson)
 * effectiveDateTime = 2020-08-14
-* hasMember = Reference(EgensomsorgLetteBegraensninger)

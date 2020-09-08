@@ -37,11 +37,17 @@ Description: "Describes the intended or expected functional level for a conditio
 * statusReason ..0
 * expressedBy ..0
 * addresses 1..1
-* addresses only Reference(KLGatewayCareHomeCareCondition)
+* addresses only Reference(KLGatewayCareCondition)
 * addresses ^type.aggregation = #bundled
 * note ..0
 * outcomeCode ..0
 * outcomeReference ..0
+* obeys klgateway-adresses-must-be-home-care-condition
+
+Invariant: klgateway-adresses-must-be-home-care-condition
+Description: "The goal is only allowed to address home care conditions"
+Severity: #error
+Expression: "addresses.resolve().code.coding.memberOf('http://kl.dk/fhir/common/caresocial/ValueSet/KLConditionCodesHomeCare')"
 
 
 Instance: ForventetIngenBegraensninger

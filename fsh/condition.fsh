@@ -1,3 +1,4 @@
+Alias: $ConditionClinical = http://terminology.hl7.org/CodeSystem/condition-clinical
 Alias: $ConditionCategory = http://terminology.hl7.org/CodeSystem/condition-category
 Alias: $VerificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status
 
@@ -28,6 +29,8 @@ Description: "Detailed information about conditions."
 * category.coding.display ..0
 * category.coding.userSelected ..0
 * category.text ..0
+* severity 0..1
+* severity from FSIIISeverites (required)
 * code 1..1
 * code from FSIIIConditionCodes (required)
 * bodySite ..0
@@ -44,3 +47,30 @@ Description: "Detailed information about conditions."
 * note ..0
 * extension contains klgateway-care-follow-up-encounter-extension named followUpEncounter 0..1 MS
 * extension[followUpEncounter] ^definition = "Encounter for following up on this condition. Must be present if a follow-up date is known"
+* obeys klgateway-severity-mandatory-in-home-care-not-allowed-in-nursing
+
+Invariant: klgateway-severity-mandatory-in-home-care-not-allowed-in-nursing
+Description: "The severity is mandatory for home care and not allowed for nursing conditions"
+Severity: #error
+Expression: "(severity.exists() and code.coding.memberOf('http://kl.dk/fhir/common/caresocial/ValueSet/KLConditionCodesHomeCare'))
+          or (severity.empty() and code.coding.memberOf('http://kl.dk/fhir/common/caresocial/ValueSet/KLConditionCodesNursing'))"
+
+
+Instance: VaskeSigLetteBegraensninger
+InstanceOf: KLGatewayCareCondition
+* clinicalStatus = $ConditionClinical#active
+* category = $ConditionCategory#problem-list-item
+* severity = $KLTerminology#B2
+* code = $KLTerminology#J.1.1
+* subject = Reference(TestPerson)
+* recordedDate = 2020-08-14
+* extension[followUpEncounter].valueReference = Reference(OpfoelgningsKontakt)
+
+Instance: ProblemerMedPersonligPleje
+InstanceOf: KLGatewayCareCondition
+* clinicalStatus = $ConditionClinical#active
+* category = $ConditionCategory#problem-list-item
+* code = $KLTerminology#I1.1
+* subject = Reference(TestPerson)
+* recordedDate = 2020-08-14
+* extension[followUpEncounter].valueReference = Reference(OpfoelgningsKontakt)

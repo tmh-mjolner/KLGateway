@@ -14,10 +14,8 @@ Description: "Structured result or outcome of a follow up."
 * subject only Reference(klgateway-care-citizen)
 * subject ^type.aggregation = #bundled
 * focus 1..1
-* focus only Reference(KLGatewayCareHomeCareCondition or KLGatewayCareNursingCondition or KLGatewayCarePlannedIntervention or KLGatewayCareMatterOfInterestObservation) 
-* encounter 1..1
-* encounter only Reference(KLGatewayCareEncounter)
-* encounter ^type.aggregation = #bundled
+* focus only Reference(KLGatewayCareCondition or KLGatewayCarePlannedIntervention or KLGatewayCareMatterOfInterestObservation) 
+* encounter 0..0
 * effective[x] 1..1
 * effective[x] only dateTime
 * issued ..0
@@ -44,7 +42,6 @@ InstanceOf: KLGatewayCareFollowUpObservation
 * code = $SnomedCT#712744002
 * subject = Reference(TestPerson)
 * focus = Reference(VaskeSigLetteBegraensninger)
-* encounter = Reference(OpfoelgningsKontakt)
 * effectiveDateTime = 2020-08-14
 * valueCodeableConcept = $KLTerminology#E1
 
@@ -54,7 +51,6 @@ InstanceOf: KLGatewayCareFollowUpObservation
 * code = $SnomedCT#712744002
 * subject = Reference(TestPerson)
 * focus = Reference(ProblemerMedPersonligPleje)
-* encounter = Reference(OpfoelgningsKontakt)
 * effectiveDateTime = 2020-08-14
 * valueCodeableConcept = $KLTerminology#E1
 
@@ -64,7 +60,6 @@ InstanceOf: KLGatewayCareFollowUpObservation
 * code = $SnomedCT#712744002
 * subject = Reference(TestPerson)
 * focus = Reference(PersonligHygiejne)
-* encounter = Reference(OpfoelgningsKontakt)
 * effectiveDateTime = 2020-08-14
 * valueCodeableConcept = $KLTerminology#E1
 
@@ -74,7 +69,6 @@ InstanceOf: KLGatewayCareFollowUpObservation
 * code = $SnomedCT#712744002
 * subject = Reference(TestPerson)
 * focus = Reference(Dialyse)
-* encounter = Reference(OpfoelgningsKontakt)
 * effectiveDateTime = 2020-08-14
 * valueCodeableConcept = $KLTerminology#E1
 
@@ -84,6 +78,5 @@ InstanceOf: KLGatewayCareFollowUpObservation
 * code = $SnomedCT#712744002
 * subject = Reference(TestPerson)
 * focus = Reference(EgensomsorgBegraensninger)
-* encounter = Reference(OpfoelgningsKontakt)
 * effectiveDateTime = 2020-08-14
 * valueCodeableConcept = $KLTerminology#E1

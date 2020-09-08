@@ -16,7 +16,7 @@ Description: "Measurements and simple assertions made about a patient by the pat
 * subject only Reference(klgateway-care-citizen)
 * subject ^type.aggregation = #bundled
 * focus 1..1
-* focus only Reference(klgateway-care-home-care-condition)
+* focus only Reference(KLGatewayCareCondition or KLGatewayCareMatterOfInterestObservation)
 * focus ^type.aggregation = #bundled
 * encounter ..0
 * effective[x] 1..1
@@ -41,3 +41,36 @@ Description: "Measurements and simple assertions made about a patient by the pat
 * hasMember ..0
 * derivedFrom ..0
 * component ..0
+* obeys klgateway-citizen-observation-code-and-value-must-match
+* obeys klgateway-focus-must-be-home-care-condition-or-area
+
+Invariant: klgateway-citizen-observation-code-and-value-must-match
+Description: "The value of the observation shall be member of the valueset matching the code of the observation"
+Severity: #error
+Expression: "((code.coding.code = 'C') and (valueCodeableConcept.memberOf('http://kl.dk/fhir/common/caresocial/ValueSet/FSIIIPerformanceLevelCodes')))
+          or ((code.coding.code = 'D') and (valueCodeableConcept.memberOf('http://kl.dk/fhir/common/caresocial/ValueSet/FSIIIImportanceLevelCodes')))"
+
+Invariant: klgateway-focus-must-be-home-care-condition-or-area
+Description: "The focus shall be a home care condition or a home care matter of interest"
+Severity: #error
+Expression: "focus.resolve().code.coding.memberOf('http://kl.dk/fhir/common/caresocial/ValueSet/KLConditionCodesHomeCare')
+          or focus.resolve().code.coding.memberOf('http://kl.dk/fhir/common/caresocial/ValueSet/HomeCareAreas')"
+
+
+Instance: UdfoererSelvVaskeSig
+InstanceOf: KLGatewayCareCitizensOwnObservation
+* status = #final
+* code = $KLTerminology#C
+* subject = Reference(TestPerson)
+* focus = Reference(VaskeSigLetteBegraensninger)
+* effectiveDateTime = 2020-08-14
+* valueCodeableConcept = $KLTerminology#C1
+
+Instance: OpleverIkkeBegraensningerMedVaskeSig
+InstanceOf: KLGatewayCareCitizensOwnObservation
+* status = #final
+* code = $KLTerminology#D
+* subject = Reference(TestPerson)
+* focus = Reference(VaskeSigLetteBegraensninger)
+* effectiveDateTime = 2020-08-14
+* valueCodeableConcept = $KLTerminology#D1

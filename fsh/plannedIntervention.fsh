@@ -39,7 +39,7 @@ Description: "Planned interventions for nursing and home care in Danish Municipa
 * activity.detail.code 1..1
 * activity.detail.code from FSIIICareInterventions
 * activity.detail.reasonCode ..0
-* activity.detail.reasonReference only Reference(KLGatewayCareHomeCareCondition or KLGatewayCareNursingCondition)
+* activity.detail.reasonReference only Reference(KLGatewayCareCondition)
 * activity.detail.reasonReference MS
 * activity.detail.reasonReference ^definition = "Reason for this intervention. Must contain all conditions known to be addressed by this intervention"
 * activity.detail.reasonReference ^type.aggregation = #bundled
