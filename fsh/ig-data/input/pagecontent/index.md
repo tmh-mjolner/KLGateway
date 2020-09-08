@@ -8,6 +8,7 @@ The data contained in the reporting is a subset of the data defined in the Danis
 
 An overview of the model of the delivery report content is provided in the following illustration:
 
+
 <img alt="Model" src="./GatewayModel.png" style="float:none; display:block; margin-left:auto; margin-right:auto;" />
 <!--
 ![Model](./GatewayModel.png)
