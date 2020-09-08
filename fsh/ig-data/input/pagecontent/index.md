@@ -9,11 +9,6 @@ The data contained in the reporting is a subset of the data defined in the Danis
 An overview of the model of the delivery report content is provided in the following illustration:
 
 
-<img alt="Model" src="./GatewayModel.png" style="float:none; display:block; margin-left:auto; margin-right:auto;" />
-<!--
-![Model](./GatewayModel.png)
--->
-
 __Note:__ All resources refer to citizen in the bundle (some relations are omitted from the diagram to make it readable).
 
 The reporting contains the following types of information:
