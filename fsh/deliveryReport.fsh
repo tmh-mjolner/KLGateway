@@ -38,37 +38,37 @@ Description: "Deliver report to deliver for each citizen."
 * entry[followUpObservation].resource only KLGatewayCareFollowUpObservation
 * signature ..0
 
-Instance: TestPersonReport
-InstanceOf: KLGatewayCareDeliveryReport
-* type = #collection
-* timestamp = 2020-08-14T00:00:00Z
-* entry[citizen].fullUrl = "Patient/TestPerson"
-* entry[citizen].resource = TestPerson
-* entry[condition][0].fullUrl = "Condition/VaskeSigLetteBegraensninger"
-* entry[condition][0].resource = VaskeSigLetteBegraensninger 
-* entry[goal].fullUrl = "Goal/ForventetIngenBegraensninger"
-* entry[goal].resource = ForventetIngenBegraensninger
-* entry[citizensOwnObservation][0].fullUrl = "Observation/OpleverIkkeBegraensningerMedVaskeSig"
-* entry[citizensOwnObservation][0].resource = OpleverIkkeBegraensningerMedVaskeSig
-* entry[citizensOwnObservation][1].fullUrl = "Observation/UdfoererSelvVaskeSig"
-* entry[citizensOwnObservation][1].resource = UdfoererSelvVaskeSig
-* entry[condition][1].fullUrl = "Condition/ProblemerMedPersonligPleje"
-* entry[condition][1].resource = ProblemerMedPersonligPleje
-* entry[plannedIntervention].fullUrl = "CarePlan/PersonligHygiejne"
-* entry[plannedIntervention].resource = PersonligHygiejne
-* entry[plannedIntervention].fullUrl = "CarePlan/Dialyse"
-* entry[plannedIntervention].resource = Dialyse
-* entry[matterOfInterestObservation].fullUrl = "Observation/EgensomsorgBegraensninger"
-* entry[matterOfInterestObservation].resource = EgensomsorgBegraensninger
-* entry[encounter].fullUrl = "Encounter/OpfoelgningsKontakt"
-* entry[encounter].resource = OpfoelgningsKontakt
-* entry[followUpObservation][0].fullUrl = "Observation/VaskeSigFortsaettes"
-* entry[followUpObservation][0].resource = VaskeSigFortsaettes
-* entry[followUpObservation][1].fullUrl = "Observation/PersonligPlejeFortsaettes"
-* entry[followUpObservation][1].resource = PersonligPlejeFortsaettes
-* entry[followUpObservation][2].fullUrl = "Observation/PersonligHygiejneFortsaettes"
-* entry[followUpObservation][2].resource = PersonligHygiejneFortsaettes
-* entry[followUpObservation][3].fullUrl = "Observation/DialyseFortsaettes"
-* entry[followUpObservation][3].resource = DialyseFortsaettes
-* entry[followUpObservation][4].fullUrl = "Observation/EgensomsorgBegraensningerFortsaettes"
-* entry[followUpObservation][4].resource = EgensomsorgBegraensningerFortsaettes
+// Instance: TestPersonReport
+// InstanceOf: KLGatewayCareDeliveryReport
+// * type = #collection
+// * timestamp = 2020-08-14T00:00:00Z
+// * entry[citizen].fullUrl = "Patient/TestPerson"
+// * entry[citizen].resource = TestPerson
+// * entry[condition][0].fullUrl = "Condition/VaskeSigLetteBegraensninger"
+// * entry[condition][0].resource = VaskeSigLetteBegraensninger 
+// * entry[goal].fullUrl = "Goal/ForventetIngenBegraensninger"
+// * entry[goal].resource = ForventetIngenBegraensninger
+// * entry[citizensOwnObservation][0].fullUrl = "Observation/OpleverIkkeBegraensningerMedVaskeSig"
+// * entry[citizensOwnObservation][0].resource = OpleverIkkeBegraensningerMedVaskeSig
+// * entry[citizensOwnObservation][1].fullUrl = "Observation/UdfoererSelvVaskeSig"
+// * entry[citizensOwnObservation][1].resource = UdfoererSelvVaskeSig
+// * entry[condition][1].fullUrl = "Condition/ProblemerMedPersonligPleje"
+// * entry[condition][1].resource = ProblemerMedPersonligPleje
+// * entry[plannedIntervention].fullUrl = "CarePlan/PersonligHygiejne"
+// * entry[plannedIntervention].resource = PersonligHygiejne
+// * entry[plannedIntervention].fullUrl = "CarePlan/Dialyse"
+// * entry[plannedIntervention].resource = Dialyse
+// * entry[matterOfInterestObservation].fullUrl = "Observation/EgensomsorgBegraensninger"
+// * entry[matterOfInterestObservation].resource = EgensomsorgBegraensninger
+// * entry[encounter].fullUrl = "Encounter/OpfoelgningsKontakt"
+// * entry[encounter].resource = OpfoelgningsKontakt
+// * entry[followUpObservation][0].fullUrl = "Observation/VaskeSigFortsaettes"
+// * entry[followUpObservation][0].resource = VaskeSigFortsaettes
+// * entry[followUpObservation][1].fullUrl = "Observation/PersonligPlejeFortsaettes"
+// * entry[followUpObservation][1].resource = PersonligPlejeFortsaettes
+// * entry[followUpObservation][2].fullUrl = "Observation/PersonligHygiejneFortsaettes"
+// * entry[followUpObservation][2].resource = PersonligHygiejneFortsaettes
+// * entry[followUpObservation][3].fullUrl = "Observation/DialyseFortsaettes"
+// * entry[followUpObservation][3].resource = DialyseFortsaettes
+// * entry[followUpObservation][4].fullUrl = "Observation/EgensomsorgBegraensningerFortsaettes"
+// * entry[followUpObservation][4].resource = EgensomsorgBegraensningerFortsaettes
