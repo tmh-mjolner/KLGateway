@@ -38,12 +38,12 @@ Description: "Deliver report to deliver for each citizen."
 * entry[followUpObservation].resource only KLGatewayCareFollowUpObservation
 * signature ..0
 
-// Instance: TestPersonReport
-// InstanceOf: KLGatewayCareDeliveryReport
-// * type = #collection
-// * timestamp = 2020-08-14T00:00:00Z
-// * entry[citizen].fullUrl = "Patient/TestPerson"
-// * entry[citizen].resource = TestPerson
+Instance: TestPersonReport
+InstanceOf: KLGatewayCareDeliveryReport
+* type = #collection
+* timestamp = 2020-08-14T00:00:00Z
+* entry[citizen].fullUrl = "Patient/TestPerson"
+* entry[citizen].resource = TestPerson
 // * entry[condition][0].fullUrl = "Condition/VaskeSigLetteBegraensninger"
 // * entry[condition][0].resource = VaskeSigLetteBegraensninger 
 // * entry[goal].fullUrl = "Goal/ForventetIngenBegraensninger"
