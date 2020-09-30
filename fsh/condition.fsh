@@ -30,9 +30,9 @@ Description: "Detailed information about conditions."
 * category.coding.userSelected ..0
 * category.text ..0
 * severity 0..1
-* severity from FSIIISeverites (required)
+* severity from http://kl.dk/fhir/common/caresocial/ValueSet/KLSeveritiesFSIII (required)
 * code 1..1
-* code from FSIIIConditionCodes (required)
+* code from FSIIICareConditions (required)
 * bodySite ..0
 * subject only Reference(klgateway-care-citizen)
 * subject ^type.aggregation = #bundled
@@ -56,12 +56,14 @@ Expression: "(severity.exists() and code.coding.memberOf('http://kl.dk/fhir/comm
           or (severity.empty() and code.coding.memberOf('http://kl.dk/fhir/common/caresocial/ValueSet/KLConditionCodesNursing'))"
 
 
+Alias: $KLTerminology = http://kl.dk/fhir/common/caresocial/CodeSystem/FSIII
+
 Instance: VaskeSigLetteBegraensninger
 InstanceOf: KLGatewayCareCondition
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
 * severity = $KLTerminology#B2
-* code = $KLTerminology#J.1.1
+* code = $KLTerminology#J1.1
 * subject = Reference(TestPerson)
 * recordedDate = 2020-08-14
 * extension[followUpEncounter].valueReference = Reference(OpfoelgningsKontakt)

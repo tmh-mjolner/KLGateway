@@ -1,5 +1,3 @@
-Alias: $KLTerminology = urn:oid:1.2.208.176.2.21
-
 Profile: KLGatewayCarePlannedIntervention
 Parent: CarePlan
 Id: klgateway-care-planned-intervention
@@ -57,6 +55,9 @@ Description: "Planned interventions for nursing and home care in Danish Municipa
 * note ..0
 * extension contains klgateway-care-follow-up-encounter-extension named followUpEncounter 0..1 MS
 * extension[followUpEncounter] ^definition = "Encounter for following up on this intervention. Must be present if a follow-up date is known"
+
+
+Alias: $KLTerminology = http://kl.dk/fhir/common/caresocial/CodeSystem/FSIII
 
 Instance: PersonligHygiejne
 InstanceOf: KLGatewayCarePlannedIntervention

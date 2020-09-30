@@ -22,7 +22,7 @@ Description: "Structured result or outcome of a follow up."
 * performer ..0
 * value[x] 1..1
 * value[x] only CodeableConcept
-* value[x] from FSIIIFollowUpCodes
+* value[x] from http://kl.dk/fhir/common/caresocial/ValueSet/KLFollowUpCodesFSIII
 * dataAbsentReason ..0
 * interpretation ..0
 * note ..0

@@ -8,7 +8,7 @@ Description: "Measurements and simple assertions made about a patient by the pat
 * partOf ..0
 * category ..0
 * code 1..1
-* code from FSIIICitizenObservationCodes (required)
+* code from http://kl.dk/fhir/common/caresocial/ValueSet/KLCitizenObservationCodesFSIII (required)
 * code.coding.version ..0
 * code.coding.display ..0
 * code.coding.userSelected ..0
@@ -23,7 +23,7 @@ Description: "Measurements and simple assertions made about a patient by the pat
 * effective[x] only dateTime
 * value[x] 1..1
 * value[x] only CodeableConcept
-* value[x] from FSIIICitizenObservationResultCodes
+* value[x] from http://kl.dk/fhir/common/caresocial/ValueSet/KLCitizenObservationResultCodesFSIII
 * value[x].coding.version ..0
 * value[x].coding.display ..0
 * value[x].coding.userSelected ..0
@@ -47,8 +47,8 @@ Description: "Measurements and simple assertions made about a patient by the pat
 Invariant: klgateway-citizen-observation-code-and-value-must-match
 Description: "The value of the observation shall be member of the valueset matching the code of the observation"
 Severity: #error
-Expression: "((code.coding.code = 'C') and (valueCodeableConcept.memberOf('http://kl.dk/fhir/common/caresocial/ValueSet/FSIIIPerformanceLevelCodes')))
-          or ((code.coding.code = 'D') and (valueCodeableConcept.memberOf('http://kl.dk/fhir/common/caresocial/ValueSet/FSIIIImportanceLevelCodes')))"
+Expression: "((code.coding.code = 'C') and (valueCodeableConcept.memberOf('http://kl.dk/fhir/common/caresocial/ValueSet/KLPerformanceLevelCodesFSIII')))
+          or ((code.coding.code = 'D') and (valueCodeableConcept.memberOf('http://kl.dk/fhir/common/caresocial/ValueSet/KLImportanceLevelCodesFSIII')))"
 
 Invariant: klgateway-focus-must-be-home-care-condition-or-area
 Description: "The focus shall be a home care condition or a home care matter of interest"

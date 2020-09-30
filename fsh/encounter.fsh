@@ -1,5 +1,5 @@
 Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
-Alias: $KLTerminology = urn:oid:1.2.208.176.2.21
+Alias: $KLCommonCodes = http://kl.dk/fhir/common/caresocial/CodeSystem/KLCommonCareSocialCodes
 
 Profile: KLGatewayCareEncounter
 Parent: Encounter
@@ -15,9 +15,9 @@ Description: "Encounter for following up on conditions, care plans, or observati
 * class.userSelected ..0
 * classHistory ..0
 * type 1..1
-* type from KLCommonCareSocialEncounterTypes (required)
+* type from http://kl.dk/fhir/common/caresocial/ValueSet/KLEncounterTypes (required)
 * type.coding 1..1
-* type.coding = $KLTerminology#9f03dfbb-7a97-45a5-94db-d4c3501714a9
+* type.coding = $KLCommonCodes#9f03dfbb-7a97-45a5-94db-d4c3501714a9
 * type.coding.version ..0
 * type.coding.display ..0
 * type.coding.userSelected ..0
@@ -49,6 +49,6 @@ Instance: OpfoelgningsKontakt
 InstanceOf: KLGatewayCareEncounter
 * status = #planned
 * class = $v3-ActCode#HH
-* type = $KLTerminology#9f03dfbb-7a97-45a5-94db-d4c3501714a9
+* type = $KLCommonCodes#9f03dfbb-7a97-45a5-94db-d4c3501714a9
 * subject = Reference(TestPerson)
 * period.start = 2020-08-14

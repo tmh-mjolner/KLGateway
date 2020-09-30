@@ -7,7 +7,7 @@ Description: "Matter or area of interest in relation to the care of the citizen.
 * basedOn ..0
 * partOf ..0
 * category ..0
-* code from FSIIIConcernCodes
+* code from FSIIICareMatterOfInterests
 * subject only Reference(klgateway-care-citizen)
 * subject ^type.aggregation = #bundled
 * focus ..0
@@ -29,9 +29,11 @@ Description: "Matter or area of interest in relation to the care of the citizen.
 * derivedFrom ..0
 * component ..0
 
+Alias: $KLTerminology = http://kl.dk/fhir/common/caresocial/CodeSystem/FSIII
+
 Instance: EgensomsorgBegraensninger
 InstanceOf: KLGatewayCareMatterOfInterestObservation
 * status = #final
-* code = urn:oid:1.2.208.176.2.21#J1
+* code = $KLTerminology#J1
 * subject = Reference(TestPerson)
 * effectiveDateTime = 2020-08-14
