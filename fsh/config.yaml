@@ -13,6 +13,7 @@ jurisdiction: urn:iso:std:iso:3166#DK "Denmark"
 template: fhir.base.template#0.1.0
 
 dependencies:
+  dk.fhir.ig.dk-core: current
   dk.fhir.ig.kl.common.caresocial: current
 
 menu:
