@@ -7,6 +7,7 @@ Description: "Measurements and simple assertions made about a patient by the pat
 * basedOn ..0
 * partOf ..0
 * category ..0
+* status ^definition = "The status of the result value. Will typically be final or entered-in-error."
 * code 1..1
 * code from http://kl.dk/fhir/common/caresocial/ValueSet/KLCitizenObservationCodesFSIII (required)
 * code.coding.version ..0
@@ -59,6 +60,7 @@ Expression: "focus.resolve().code.coding.memberOf('http://kl.dk/fhir/common/care
 
 Instance: UdfoererSelvVaskeSig
 InstanceOf: KLGatewayCareCitizensOwnObservation
+Description: "Citizens own observation regarding abililty to wash himself"
 * status = #final
 * code = $KLTerminology#C
 * subject = Reference(TestPerson)
@@ -68,6 +70,7 @@ InstanceOf: KLGatewayCareCitizensOwnObservation
 
 Instance: OpleverIkkeBegraensningerMedVaskeSig
 InstanceOf: KLGatewayCareCitizensOwnObservation
+Description: "Citizens own observation regarding the importance of the limitations on the ability to wash himself"
 * status = #final
 * code = $KLTerminology#D
 * subject = Reference(TestPerson)

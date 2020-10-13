@@ -7,6 +7,7 @@ Description: "Matter or area of interest in relation to the care of the citizen.
 * basedOn ..0
 * partOf ..0
 * category ..0
+* status = #final
 * code from FSIIICareMatterOfInterests
 * subject only Reference(klgateway-care-citizen)
 * subject ^type.aggregation = #bundled
@@ -33,6 +34,7 @@ Alias: $KLTerminology = http://kl.dk/fhir/common/caresocial/CodeSystem/FSIII
 
 Instance: EgensomsorgBegraensninger
 InstanceOf: KLGatewayCareMatterOfInterestObservation
+Description: "An observation that self-care is an area that is a matter of interest regarding the test person"
 * status = #final
 * code = $KLTerminology#J1
 * subject = Reference(TestPerson)

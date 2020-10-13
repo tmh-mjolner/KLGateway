@@ -28,6 +28,7 @@ Description: "Administrative information about a citizen receiving care or care 
 
 Instance: TestPerson
 InstanceOf: KLGatewayCareCitizen
+Description: "Test person used in the examples of the implementation guide"
 * identifier.use = #official
 * identifier.value = "0101010101"
 * identifier.system = "urn:oid:1.2.208.176.1.2"

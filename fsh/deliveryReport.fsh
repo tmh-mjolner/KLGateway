@@ -40,6 +40,7 @@ Description: "Deliver report to deliver for each citizen."
 
 Instance: TestPersonReport
 InstanceOf: KLGatewayCareDeliveryReport
+Description: "Example of a delivery report for the test person"
 * type = #collection
 * timestamp = 2020-08-14T00:00:00Z
 * entry[citizen].fullUrl = "Patient/TestPerson"

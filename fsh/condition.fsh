@@ -9,6 +9,7 @@ Title: "Care Condition"
 Description: "Detailed information about conditions."
 * identifier ..0
 * clinicalStatus 1..1
+* clinicalStatus = $ConditionClinical#active
 * clinicalStatus.coding.version ..0
 * clinicalStatus.coding.display ..0
 * clinicalStatus.coding.userSelected ..0
@@ -60,6 +61,7 @@ Alias: $KLTerminology = http://kl.dk/fhir/common/caresocial/CodeSystem/FSIII
 
 Instance: VaskeSigLetteBegraensninger
 InstanceOf: KLGatewayCareCondition
+Description: "Assessed ability for the test person to wash himself"
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
 * severity = $KLTerminology#B2
@@ -70,6 +72,7 @@ InstanceOf: KLGatewayCareCondition
 
 Instance: ProblemerMedPersonligPleje
 InstanceOf: KLGatewayCareCondition
+Description: "Assessed ability for the test person to perform personal care"
 * clinicalStatus = $ConditionClinical#active
 * category = $ConditionCategory#problem-list-item
 * code = $KLTerminology#I1.1

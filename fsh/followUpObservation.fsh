@@ -9,6 +9,7 @@ Description: "Structured result or outcome of a follow up."
 * basedOn ..0
 * partOf ..0
 * category ..0
+* status = #final
 * code.coding 1..1
 * code.coding = $SnomedCT#712744002
 * subject only Reference(klgateway-care-citizen)
@@ -38,6 +39,7 @@ Description: "Structured result or outcome of a follow up."
 
 Instance: VaskeSigFortsaettes
 InstanceOf: KLGatewayCareFollowUpObservation
+Description: "Follow-up observation documenting that focus on ability to wash himself should be continued for the test person"
 * status = #final
 * code = $SnomedCT#712744002
 * subject = Reference(TestPerson)
@@ -47,6 +49,7 @@ InstanceOf: KLGatewayCareFollowUpObservation
 
 Instance: PersonligPlejeFortsaettes
 InstanceOf: KLGatewayCareFollowUpObservation
+Description: "Follow-up observation documenting that focus on personal care should be continued for the test person"
 * status = #final
 * code = $SnomedCT#712744002
 * subject = Reference(TestPerson)
@@ -56,6 +59,7 @@ InstanceOf: KLGatewayCareFollowUpObservation
 
 Instance: PersonligHygiejneFortsaettes
 InstanceOf: KLGatewayCareFollowUpObservation
+Description: "Follow-up observation documenting that the planned intervention on personal hygiene should be continued for the test person"
 * status = #final
 * code = $SnomedCT#712744002
 * subject = Reference(TestPerson)
@@ -65,6 +69,7 @@ InstanceOf: KLGatewayCareFollowUpObservation
 
 Instance: DialyseFortsaettes
 InstanceOf: KLGatewayCareFollowUpObservation
+Description: "Follow-up observation documenting that the planned intervention on dialysis should be continued for the test person"
 * status = #final
 * code = $SnomedCT#712744002
 * subject = Reference(TestPerson)
@@ -74,6 +79,7 @@ InstanceOf: KLGatewayCareFollowUpObservation
 
 Instance: EgensomsorgBegraensningerFortsaettes
 InstanceOf: KLGatewayCareFollowUpObservation
+Description: "Follow-up observation documenting that focus on conditions within the area of self-care should be continued for the test person"
 * status = #final
 * code = $SnomedCT#712744002
 * subject = Reference(TestPerson)

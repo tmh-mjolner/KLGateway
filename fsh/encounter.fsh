@@ -47,6 +47,7 @@ Description: "Encounter for following up on conditions, care plans, or observati
 
 Instance: OpfoelgningsKontakt
 InstanceOf: KLGatewayCareEncounter
+Description: "Encounter documenting the next date for a follow-up"
 * status = #planned
 * class = $v3-ActCode#HH
 * type = $KLCommonCodes#9f03dfbb-7a97-45a5-94db-d4c3501714a9

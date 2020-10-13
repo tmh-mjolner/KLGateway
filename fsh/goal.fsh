@@ -7,6 +7,7 @@ Id: klgateway-care-goal
 Title: "Care Goal"
 Description: "Describes the intended or expected functional level for a condition of a citizen."
 * identifier ..0
+* lifecycleStatus ^definition = "Shall be planned, entered-in-error, or fit the current lifecycle status of the goal"
 * category 1..1
 * category from http://kl.dk/fhir/common/caresocial/ValueSet/KLGoalTypeCodes
 * category.coding 1..1
@@ -53,6 +54,7 @@ Expression: "addresses.resolve().code.coding.memberOf('http://kl.dk/fhir/common/
 
 Instance: ForventetIngenBegraensninger
 InstanceOf: KLGatewayCareGoal
+Description: "A goal for the test person on the ability to wash himself"
 * lifecycleStatus = #planned
 * category = $KLCommonCodes#ca552020-6ed1-4cdc-b0d4-32697f1f27ad
 * description = $KLTerminology#e182c5dc-9f91-474a-92e8-f62be3d498f4
