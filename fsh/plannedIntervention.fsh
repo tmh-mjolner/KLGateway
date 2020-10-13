@@ -1,5 +1,3 @@
-Alias: $KLTerminology = urn:oid:1.2.208.176.2.21
-
 Profile: KLGatewayCarePlannedIntervention
 Parent: CarePlan
 Id: klgateway-care-planned-intervention
@@ -11,6 +9,7 @@ Description: "Planned interventions for nursing and home care in Danish Municipa
 * basedOn ..0
 * replaces ..0
 * partOf ..0
+* status ^definition = "Shall be either unknown, entered-in-error, or the status of the intervention at the time of reporting"
 * intent = #plan
 * category ..0
 * title ..0
@@ -39,12 +38,12 @@ Description: "Planned interventions for nursing and home care in Danish Municipa
 * activity.detail.code 1..1
 * activity.detail.code from FSIIICareInterventions
 * activity.detail.reasonCode ..0
-* activity.detail.reasonReference only Reference(KLGatewayCareHomeCareCondition or KLGatewayCareNursingCondition)
+* activity.detail.reasonReference only Reference(KLGatewayCareCondition)
 * activity.detail.reasonReference MS
 * activity.detail.reasonReference ^definition = "Reason for this intervention. Must contain all conditions known to be addressed by this intervention"
 * activity.detail.reasonReference ^type.aggregation = #bundled
 * activity.detail.goal ..0
-// * activity.detail.status
+* activity.detail.status ^definition = "Shall be either unknown, entered-in-error, or the activity status of the intervention at the time of reporting"
 * activity.detail.statusReason ..0
 * activity.detail.doNotPerform ..0
 * activity.detail.scheduled[x] ..0
@@ -58,8 +57,12 @@ Description: "Planned interventions for nursing and home care in Danish Municipa
 * extension contains klgateway-care-follow-up-encounter-extension named followUpEncounter 0..1 MS
 * extension[followUpEncounter] ^definition = "Encounter for following up on this intervention. Must be present if a follow-up date is known"
 
+
+Alias: $KLTerminology = http://kl.dk/fhir/common/caresocial/CodeSystem/FSIII
+
 Instance: PersonligHygiejne
 InstanceOf: KLGatewayCarePlannedIntervention
+Description: "Planned intervention doing personal hygiene according to FSIII on the test person"
 * status = #active
 * intent = #plan
 * subject = Reference(TestPerson)
@@ -69,6 +72,7 @@ InstanceOf: KLGatewayCarePlannedIntervention
 
 Instance: Dialyse
 InstanceOf: KLGatewayCarePlannedIntervention
+Description: "Planned intervention doing dialysis according to FSIII on the test person"
 * status = #active
 * intent = #plan
 * subject = Reference(TestPerson)

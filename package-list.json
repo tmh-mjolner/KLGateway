@@ -1,0 +1,17 @@
+{
+  "package-id": "hl7.fhir.dk.kl.gateway.care",
+  "title": "KL Gateway",
+  "introduction": "FHIR profiles forreporting to the KL gateway",
+  "canonical": "http://gateway.kl.dk",
+  "list": [
+    {
+      "version": "0.9.2",
+      "desc": "KL Gateway draft",
+      "path": "http://build.fhir.org/ig/tmh-mjolner/KLGateway/",
+      "status": "ci-build",
+      "sequence": "STU",
+      "fhirVersion": "4.0.1",
+      "current": true
+    }
+  ]
+}
