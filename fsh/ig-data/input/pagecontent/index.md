@@ -9,9 +9,6 @@ The data contained in the reporting is a subset of the data defined in the Danis
 An overview of the model of the delivery report content is provided in the following illustration:
 
 <img alt="Model" src="./GatewayModel.png" style="float:none; display:block; margin-left:auto; margin-right:auto;" />
-<!--
-![Model](./GatewayModel.png)
--->
 
 __Note:__ All resources refer to citizen in the bundle (some relations are omitted from the diagram to make it readable).
 
@@ -23,7 +20,7 @@ Information about the citizen that is the subject of the report. The main inform
 ##### Validation
 - Only one citizen resource is present in the report
 - The civil registration number is a syntactically valid CPR-nr.
-- The managing organization is a syntactically valid SOR code (only code length is validated)
+- The managing organization is a syntactically valid SOR code (only code length is currently validated in the profile, but the authorization validates the actual SOR code)
 
 #### Conditions
 Information about the conditions (FSIII tilstande) of the citizen as assessed by the care practitioners. A condition represents an assessement of either a home care or a nursing condition and it must contain the level 2 condition code as defined by FSIII, the time that it was recorded, and a reference to an encounter with the follow-up date of the condition if it is known. Home care conditions must also contain the severity of the condition represented as the functioning level as defined by FSIII.
@@ -72,7 +69,7 @@ Free text information about the citizens own observations is not part of this re
 #### Planned Interventions
 Information about the planned interventions (FSIII indsatser) that the municipality performs to address the conditions of the citizen. A planned intervention represents one type of care given to the citizen. It must contain the level 2 code for the intervention, the start time, the end time if ended, references to the conditions the intervention addresses if known, and a reference to an encounter with the follow-up date of the intervention if known.
 
-A citizen may be granted several level 3 intervensions for the same level 2 intervension. Level 3 intervensions are reported using the level 2 code, and are allowed to be overlapping to support this.
+A citizen may be granted several level 3 intervensions for the same level 2 intervention. Level 3 interventions are reported using both the level 2 code and the locally defined level 3 code. Interventions are allowed to be overlapping to support this.
 
 All changes to the planned interventions since the last reporting must be contained in a new report, including all conditions and follow-up encounters referenced by the reported interventions.
 
@@ -121,7 +118,9 @@ Free text information about the follow-up outcome is not part of this reporting.
 - Follow-up observations have a valid follow-up code according to FSIII (Resultat af opfølgning)
 
 ### Reporting
-Reporting is done using the profile KLGatewayCareDeliveryReport, which is a bundle containing multiple resources about one citizen. The source systems must periodically (at least daily) transfer a delivery report containing a snapshot of the current state for each changed citizen with all registrations that has changed since the previous delivery report was transferred. Multiple delivery reports must be delivered if the previous reporting for some reason happened more than one day ago, each covering no more than one day. A full history of changes is not required.
+Reporting is done using the profile KLGatewayCareDeliveryReport, which is a bundle containing multiple resources about one citizen. The source systems must periodically (at least daily) transfer a delivery report containing a snapshot of the current information for each changed citizen with all registrations that has changed since the previous delivery report was transferred. Multiple delivery reports must be delivered if the previous reporting for some reason happened more than one day ago, each covering no more than one day. A full history of changes is not required.
+
+Note, that the snapshot of the current information contains information about the hole day, not only the current state for the citizen. An intervention that fx has ended during the day shall therefore be included in the report with an end date and time along with possible new interventions.
 
 The id of any resource must be universally unique, e.g. a uuid. Resources with the same id as previously reported are considered to be an update of the previous reported information at the time indicated in the metadata of the resource. A resource that has been enterered in error is invalidated by an update with the same resource id as previously reported.
 
@@ -133,3 +132,5 @@ The delivery report is immediately validated when a source system posts it to th
 The gateway thus validates that the format of the content is valid, the structure of all resources are correct, the cardinatity of all values are valid, codings only contains valid codes, and that all referenced resources are included in the report. The rules described on this page are validated to the extent possible through more complex constraints in the profiles. The constraints in the profiles also contains a textual description to describe the error when the validation finds that a constraint is not observed. This includes more technical validations not listed above, such as fixed values aligned with the shared information model (FKI) and the FHIR standard in general.
 
 The gateway is not able to validate immediately whether the reported data conflicts with previously reported data. Problems like this will probably not be found until the data is processed for business intelligence or reporting to other recipients. Handling these problems will have to be a manual process. The gateway will for obvious reasons not be able to validate whether all the data from the source systems has been reported, including attributes with zero to one or zero to many cardinality marked as "must support".
+
+__Note:__ Must support markers are used according to the FHIR specification and means that it shall be included in the report if the information is available. A precise definition of what available means in each case is described in the definition of the element.
