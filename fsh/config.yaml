@@ -2,7 +2,7 @@ id: hl7.fhir.dk.kl.gateway.care
 canonical: http://gateway.kl.dk
 name: KLGateway
 status: draft
-version: 0.9.2
+version: 0.9.3
 fhirVersion: 4.0.1
 copyrightYear: 2020+
 releaseLabel: Build CI

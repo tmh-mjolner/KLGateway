@@ -36,7 +36,16 @@ Description: "Planned interventions for nursing and home care in Danish Municipa
 * activity.detail.instantiatesCanonical ..0
 * activity.detail.instantiatesUri ..0
 * activity.detail.code 1..1
-* activity.detail.code from FSIIICareInterventions
+* activity.detail.code.coding ^slicing.discriminator.type = #value
+* activity.detail.code.coding ^slicing.discriminator.path = "system"
+* activity.detail.code.coding ^slicing.rules = #closed
+* activity.detail.code.coding contains level2 1..1 and level3 0..1 MS
+* activity.detail.code.coding[level2].system = "http://kl.dk/fhir/common/caresocial/CodeSystem/FSIII"
+* activity.detail.code.coding[level2] from FSIIICareInterventions
+* activity.detail.code.coding[level3].system = "http://gateway.kl.dk/CodeSystem/LocallyDefinedInterventions"
+* activity.detail.code.coding[level3].code 1..1
+* activity.detail.code.coding[level3].display 1..1
+* activity.detail.code.coding[level3] ^definition = "Shall contain locally defined code if it is a locally defined level 3 intervention"
 * activity.detail.reasonCode ..0
 * activity.detail.reasonReference only Reference(KLGatewayCareCondition)
 * activity.detail.reasonReference MS
@@ -67,7 +76,7 @@ Description: "Planned intervention doing personal hygiene according to FSIII on 
 * intent = #plan
 * subject = Reference(TestPerson)
 * period.start = 2020-08-14
-* activity.detail.code = $KLTerminology#H1.1
+* activity.detail.code.coding[level2] = $KLTerminology#H1.1
 * activity.detail.status = #in-progress
 
 Instance: Dialyse
@@ -77,5 +86,5 @@ Description: "Planned intervention doing dialysis according to FSIII on the test
 * intent = #plan
 * subject = Reference(TestPerson)
 * period.start = 2020-08-14
-* activity.detail.code = $KLTerminology#G1.10
+* activity.detail.code.coding[level2] = $KLTerminology#G1.10
 * activity.detail.status = #in-progress

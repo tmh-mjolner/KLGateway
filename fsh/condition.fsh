@@ -9,7 +9,6 @@ Title: "Care Condition"
 Description: "Detailed information about conditions."
 * identifier ..0
 * clinicalStatus 1..1
-* clinicalStatus = $ConditionClinical#active
 * clinicalStatus.coding.version ..0
 * clinicalStatus.coding.display ..0
 * clinicalStatus.coding.userSelected ..0
